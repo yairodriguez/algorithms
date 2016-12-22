@@ -25,6 +25,12 @@
   },
   "homepage": "https://github.com/yairodriguez/algorithms#readme",
   "devDependencies": {
-    "eslint": "^3.12.2"
+    "eslint": "^3.12.2",
+    "ghooks": "^2.0.0"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm t"
+    }
   }
 }
