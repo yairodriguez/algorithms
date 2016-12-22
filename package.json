@@ -5,7 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "eslint src/**/*.js"
+    "lint": "eslint *.js src tests",
+    "pretest": "npm run lint",
+    "test": "mocha tests/** --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -27,8 +29,10 @@
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-preset-es2015": "^6.18.0",
+    "chai": "^3.5.0",
     "eslint": "^3.12.2",
-    "ghooks": "^2.0.0"
+    "ghooks": "^2.0.0",
+    "mocha": "^3.2.0"
   },
   "config": {
     "ghooks": {
